@@ -9,7 +9,7 @@ After logging in with `oc login`, if you don't have a project setup all ready, g
 
 That's it, project has been created, set it to your active project
 
-        $ oc project nodejs
+        $ oc project nodejs-pod-echo
 
 ## The app
 
