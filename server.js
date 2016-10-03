@@ -1,9 +1,9 @@
 var http = require('http');
-var process = require('process');
+var os = require('os');
 
 http.createServer(function (req, res) {
   res.writeHead(200, {'Content-Type': 'text'});
 
-  res.end('Welcom on Host/Pod:\n' + process.pid + '\n');
+  res.end('Welcome on Host/Pod:\n' + os.hostname() + '\n');
 }).listen(8080,'0.0.0.0');
 console.log('Server running.')
