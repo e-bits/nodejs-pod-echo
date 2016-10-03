@@ -8,5 +8,5 @@ app.get('/', function (req, res) {
   res.send('<html><body>Welcome on Host/Pod: ' + hostname + '</body></html>');
 });
 
-app.listen(80);
+app.listen(8080);
 console.log('Server running.');
