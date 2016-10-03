@@ -1,9 +1,12 @@
-var http = require('http');
-var os = require('os');
+var express = require('express');
+var os = require("os");
 
-http.createServer(function (req, res) {
-  res.writeHead(200, {'Content-Type': 'text'});
+var app = express();
+var hostname = os.hostname();
 
-  res.end('Welcome on Host/Pod:\n' + os.hostname() + '\n');
-}).listen(8080,'0.0.0.0');
-console.log('Server running.')
+app.get('/', function (req, res) {
+  res.send('<html><body>Welcome on Host/Pod: ' + hostname + '</body></html>');
+});
+
+app.listen(80);
+console.log('Server running.');
